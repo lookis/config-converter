@@ -1,4 +1,5 @@
 
+import { general, us as us_rules } from '@/rules';
 import yaml from 'js-yaml';
 import { type NextRequest } from 'next/server';
 
@@ -28,9 +29,10 @@ export async function GET(request: NextRequest) {
       "url": "http://www.gstatic.com/generate_204",
       "interval": 86400,
     })
-    config['rules'].unshift("DOMAIN-SUFFIX,openai.com,us")
+    config['rules'] = us_rules(config['rules'])
   }
-  config['rules'].unshift("DOMAIN-SUFFIX,pixiv.cat,萌喵加速-Nirvana")
+  config['rules'] = general(config['rules'])
+
   return new Response(yaml.dump(config));
 }
 
