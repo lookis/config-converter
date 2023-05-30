@@ -30,6 +30,7 @@ export async function GET(request: NextRequest) {
     })
     config['rules'].unshift("DOMAIN-SUFFIX,openai.com,us")
   }
+  config['rules'].unshift("DOMAIN-SUFFIX,pixiv.cat,萌喵加速-Nirvana")
   return new Response(yaml.dump(config));
 }
 
