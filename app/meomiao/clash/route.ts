@@ -30,6 +30,7 @@ export async function GET(request: NextRequest) {
       "interval": 86400,
     })
     config['rules'] = us_rules(config['rules'])
+    config["proxy-groups"][0]['proxies'].unshift("us")
   }
   config['rules'] = general(config['rules'])
 
