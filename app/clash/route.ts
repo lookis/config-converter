@@ -53,6 +53,7 @@ export async function GET(request: NextRequest) {
   const config: any = yaml.load(config_global)
   const us_proxy_names: string[] = []
   const proxy_names: string[] = []
+  const proxies: any[] = []
   const proxy_groups = []
   if (token === process.env.TOKEN) {
     const promises: Promise<any>[] = []
@@ -69,6 +70,7 @@ export async function GET(request: NextRequest) {
           // add proxy
           for (const proxy of proxy_config['proxies']) {
             const name = proxy['name'] as string
+            proxies.push(proxy)
             // for all proxy group
             proxy_names.push(name)
             // for us proxy group
@@ -100,6 +102,7 @@ export async function GET(request: NextRequest) {
 
   config["proxy-groups"] = proxy_groups
   config['rules'] = rules()
+  config['proxies'] = proxies
   console.log(config)
   return new Response(yaml.dump(config));
 }
