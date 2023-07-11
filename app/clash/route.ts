@@ -87,6 +87,10 @@ export async function GET(request: NextRequest) {
       }
     }
     await Promise.all(promises)
+  } else {
+    return new Response("Authentication required", {
+      status: 401,
+    })
   }
 
   //global auto proxy
