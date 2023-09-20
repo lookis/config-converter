@@ -4,7 +4,7 @@ const rules = `
 rules:
 - DOMAIN-SUFFIX,intra.didiglobal.com,DIRECT
 - DOMAIN-SUFFIX,didichuxing.com,DIRECT
-- DOMAIN-SUFFIX,xiaojukeji.com,DIRECT
+- DOMAIN-SUFFIX,intra.xiaojukeji.com,DIRECT
 - DOMAIN-SUFFIX,pixiv.cat,PROXY
 - DOMAIN-SUFFIX,openai.com,US
 - DOMAIN,api.meomiao.me,DIRECT
