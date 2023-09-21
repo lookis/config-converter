@@ -11,7 +11,7 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 dns:
-  enable: false
+  enable: true
   ipv6: false
   default-nameserver:
     - 223.5.5.5
@@ -27,6 +27,7 @@ dns:
     - https://dns.cloudflare.com/dns-query
     - https://dns.twnic.tw/dns-query
     - tls://8.8.4.4:853
+    - dhcp://en0
   fallback-filter:
     geoip: true
     ipcidr:
