@@ -2,9 +2,9 @@ import yaml from 'js-yaml';
 
 const rules = `
 rules:
-- DOMAIN-SUFFIX,intra.didiglobal.com,DIRECT
-- DOMAIN-SUFFIX,didichuxing.com,DIRECT
-- DOMAIN-SUFFIX,intra.xiaojukeji.com,DIRECT
+- DOMAIN-SUFFIX,intra.didiglobal.com,DIRECT,no-resolve
+- DOMAIN-SUFFIX,didichuxing.com,DIRECT,no-resolve
+- DOMAIN-SUFFIX,intra.xiaojukeji.com,DIRECT,no-resolve
 - DOMAIN-SUFFIX,pixiv.cat,PROXY
 - DOMAIN-SUFFIX,openai.com,US
 - DOMAIN,api.meomiao.me,DIRECT
