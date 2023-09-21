@@ -11,7 +11,7 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 dns:
-  enable: true
+  enable: false
   ipv6: false
   default-nameserver:
     - 223.5.5.5
